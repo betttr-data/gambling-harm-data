@@ -1,0 +1,13 @@
+jurisdiction,jurisdiction_code,jurisdiction_type,administering_agency,enrollment_method,program_url,notes,participating_states
+New Jersey,NJ,state,Division of Gaming Enforcement,Online,https://www.njportal.com/dge/selfexclusion,Enroll online. Covers online gaming statewide; choose online-only or all gambling.,
+Pennsylvania,PA,state,Pennsylvania Gaming Control Board,Online,https://gamingcontrolboard.pa.gov/self-exclusion,"Four separate tracks: casinos, online gambling, video gaming terminals, and fantasy. Enroll in each you need.",
+Michigan,MI,state,Michigan Gaming Control Board,Online (internet gaming) / in person (casinos),https://www.michigan.gov/mgcb/responsible-gaming,Disassociated Persons List covers casinos; a separate internet-gaming self-exclusion can be done online.,
+Connecticut,CT,state,Department of Consumer Protection,Online,https://portal.ct.gov/gaming/self-exclusion,Enroll online. Covers online platforms and retail sports wagering statewide.,
+Ohio,OH,state,Ohio Casino Control Commission (Time Out Ohio),Online,https://timeout.ohio.gov,"Enroll online in Time Out Ohio, the state's voluntary exclusion program.",
+Colorado,CO,state,Division of Gaming,Online,https://betsmart.colorado.gov/self-exclusion,Enroll through the Division of Gaming's program at betsmart.colorado.gov.,
+Indiana,IN,state,Indiana Gaming Commission,"Online, at any Indiana casino, or at the IGC office",,Voluntary Exclusion Program.,
+New York,NY,state,New York State Gaming Commission,Notarized form by mail or in person,,"Download the Voluntary Self-Exclusion form, have it notarized, and submit it by mail or in person.",
+Illinois,IL,state,Illinois Gaming Board,In person only,,Enroll at an Illinois Gaming Board office or any Illinois casino. Covers all casinos and sports wagering.,
+Massachusetts,MA,state,Massachusetts Gaming Commission (GameSense),In-person appointment,,Enroll through GameSense: an appointment at a casino GameSense center or with the Gaming Commission.,
+Maryland,MD,state,Maryland Lottery and Gaming Control Agency,In person,,Enroll in person at a casino or at the Lottery and Gaming Control Agency.,
+National Voluntary Self-Exclusion Program (NVSEP),US,multi-state,idPair (operator),One enrollment and one remote notary appointment; every participating state closes at once. Operated by idPair.,https://www.nvsep.org,,CA; WY; CO; NE; IA; WI; MI; LA; PR
