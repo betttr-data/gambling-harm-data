@@ -26,7 +26,7 @@ First public release.
 - `LICENSE` — CC BY 4.0 full legal text.
 
 ### Notes on this release
-- **DOI placeholders.** `CONCEPT_DOI_PLACEHOLDER` and `VERSION_DOI_PLACEHOLDER` appear in `README.md`, `CITATION.cff` and `datapackage.json`. Zenodo mints both DOIs only when the first tagged release is archived, so they are filled in immediately afterwards and shipped as `2026.9.1`. Anything citing `2026.9.0` should cite the concept DOI.
+- **DOIs.** Concept DOI 10.5281/zenodo.22857767 (always the newest version); version DOI 10.5281/zenodo.22857768 for 2026.9.0. Minted by Zenodo on 2026-09-21 from the v2026.9.0 GitHub release; the README, CITATION.cff and datapackage.json were updated on `main` the same day (the archived v2026.9.0 zip carries the pre-DOI placeholders — cite the DOI, not the zip).
 - **`self-exclusion-programs.csv` is not a 50-state census.** 11 jurisdictions verified. Absence of a state is absence of verification, not absence of a program. This is the largest open gap in the release.
 - **`quit-gambling-apps.csv` is a panel, not a census.** The Apple search endpoint caps at 50 results per term. Every count derived from it is a floor.
 - **No composite score anywhere**, and no ranking on the state-published layer, by design.

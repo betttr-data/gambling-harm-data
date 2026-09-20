@@ -1,6 +1,6 @@
 # Gambling Harm Open Data
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.CONCEPT__DOI__PLACEHOLDER-blue)](https://doi.org/10.5281/zenodo.CONCEPT_DOI_PLACEHOLDER)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22857767-blue)](https://doi.org/10.5281/zenodo.22857767)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
 [![Data Package](https://img.shields.io/badge/Frictionless-datapackage.json-green)](datapackage.json)
 
@@ -44,11 +44,11 @@ https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/self-
 
 **APA 7**
 
-> Betttr LLC. (2026). *Gambling Harm Open Data* (Version 2026.9.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.VERSION_DOI_PLACEHOLDER
+> Betttr LLC. (2026). *Gambling Harm Open Data* (Version 2026.9.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22857768
 
 To cite the dataset in general rather than one release, use the concept DOI, which always resolves to the latest version:
 
-> Betttr LLC. (2026). *Gambling Harm Open Data* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.CONCEPT_DOI_PLACEHOLDER
+> Betttr LLC. (2026). *Gambling Harm Open Data* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22857767
 
 **BibTeX**
 
@@ -60,14 +60,14 @@ To cite the dataset in general rather than one release, use the concept DOI, whi
   month     = {10},
   publisher = {Zenodo},
   version   = {2026.9.0},
-  doi       = {10.5281/zenodo.VERSION_DOI_PLACEHOLDER},
-  url       = {https://doi.org/10.5281/zenodo.VERSION_DOI_PLACEHOLDER}
+  doi       = {10.5281/zenodo.22857768},
+  url       = {https://doi.org/10.5281/zenodo.22857768}
 }
 ```
 
 **Citing one file.** Name it, so a reader can find the same numbers:
 
-> Betttr LLC. (2026). Gambling Harm Index [Data file]. In *Gambling Harm Open Data* (Version 2026.9.0). Zenodo. https://doi.org/10.5281/zenodo.VERSION_DOI_PLACEHOLDER
+> Betttr LLC. (2026). Gambling Harm Index [Data file]. In *Gambling Harm Open Data* (Version 2026.9.0). Zenodo. https://doi.org/10.5281/zenodo.22857768
 
 **In a news story,** this is enough: *Gambling Harm Open Data, Betttr LLC, September 2026* — with a link to https://betttr.net/data/. Journalists do not need to ask permission, and do not need to email us first.
 

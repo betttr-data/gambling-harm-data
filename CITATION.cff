@@ -32,10 +32,10 @@ license-url: "https://creativecommons.org/licenses/by/4.0/"
 identifiers:
   - description: "The concept DOI of the dataset (resolves to all versions, always redirects to the latest)."
     type: doi
-    value: "10.5281/zenodo.CONCEPT_DOI_PLACEHOLDER"
+    value: "10.5281/zenodo.22857767"
   - description: "The versioned DOI for release 2026.9.0 of the dataset."
     type: doi
-    value: "10.5281/zenodo.VERSION_DOI_PLACEHOLDER"
+    value: "10.5281/zenodo.22857768"
   - description: "The dataset landing page."
     type: url
     value: "https://betttr.net/data/"

@@ -1,7 +1,7 @@
 {
   "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
   "name": "gambling-harm-data",
-  "id": "https://doi.org/10.5281/zenodo.CONCEPT_DOI_PLACEHOLDER",
+  "id": "https://doi.org/10.5281/zenodo.22857767",
   "title": "Gambling Harm Open Data",
   "description": "Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together and refreshed on a stated clock.\n\nThe set covers what each U.S. state publishes about gambling harm and the one comparable 51-jurisdiction helpline series that exists; the responsible-gambling tools each major U.S. sportsbook publishes; a sourced glossary of gambling-recovery and gambling-industry terminology with stigma-preferred phrasing; a dated panel of quit-gambling apps on the U.S. iOS App Store; and a directory of state and multi-state self-exclusion programs.\n\nEvery value carries the source it came from or an explicit marker saying why it does not. Nothing here is estimated, modelled, imputed or interpolated. There is no composite score, and states are never ranked on figures that are not comparable.\n\nProduced by Betttr LLC, maker of a recovery app; no operator or affiliate money.",
   "version": "2026.9.0",
