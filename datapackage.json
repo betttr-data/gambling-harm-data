@@ -1,0 +1,901 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "gambling-harm-data",
+  "id": "https://doi.org/10.5281/zenodo.CONCEPT_DOI_PLACEHOLDER",
+  "title": "Gambling Harm Open Data",
+  "description": "Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together and refreshed on a stated clock.\n\nThe set covers what each U.S. state publishes about gambling harm and the one comparable 51-jurisdiction helpline series that exists; the responsible-gambling tools each major U.S. sportsbook publishes; a sourced glossary of gambling-recovery and gambling-industry terminology with stigma-preferred phrasing; a dated panel of quit-gambling apps on the U.S. iOS App Store; and a directory of state and multi-state self-exclusion programs.\n\nEvery value carries the source it came from or an explicit marker saying why it does not. Nothing here is estimated, modelled, imputed or interpolated. There is no composite score, and states are never ranked on figures that are not comparable.\n\nProduced by Betttr LLC, maker of a recovery app; no operator or affiliate money.",
+  "version": "2026.10.0",
+  "created": "2026-10-15T13:00:00Z",
+  "homepage": "https://betttr.net/data/",
+  "keywords": [
+    "gambling harm",
+    "problem gambling",
+    "gambling disorder",
+    "sports betting",
+    "self-exclusion",
+    "responsible gambling",
+    "helpline",
+    "public health",
+    "harm reduction",
+    "United States"
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Betttr LLC",
+      "path": "https://betttr.net",
+      "email": "support@betttr.net",
+      "roles": [
+        "creator",
+        "contact",
+        "rightsHolder",
+        "dataCurator"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Council on Problem Gambling, National Problem Gambling Helpline annual report, Appendix A (prepared by the Omni Institute)",
+      "path": "https://www.ncpgambling.org/",
+      "version": "CY2025"
+    },
+    {
+      "title": "State gaming regulators, lotteries, behavioral-health agencies and state problem-gambling councils (per-row URLs in state_source_url)",
+      "path": "https://betttr.net/data/"
+    },
+    {
+      "title": "Operator-published responsible-gambling and help-centre pages (per-cell URLs in the *_source columns)",
+      "path": "https://betttr.net/data/",
+      "version": "2026-Q3"
+    },
+    {
+      "title": "Apple iTunes Search API, U.S. iOS App Store",
+      "path": "https://itunes.apple.com/search?term={term}&entity=software&country=us&limit=50",
+      "version": "2026-09-20"
+    },
+    {
+      "title": "Betttr self-exclusion directory",
+      "path": "https://betttr.net/self-exclusion/",
+      "version": "2026-Q3"
+    }
+  ],
+  "resources": [
+    {
+      "$schema": "https://datapackage.org/profiles/2.0/dataresource.json",
+      "name": "gambling-harm-index",
+      "type": "table",
+      "path": "data/gambling-harm-index.csv",
+      "title": "Gambling Harm Index",
+      "description": "What every U.S. state and the District of Columbia publishes about gambling harm, pooled into one table, plus the one genuinely comparable 51-jurisdiction series that exists: NCPG's annual helpline contact volume and rate per 100,000 residents. One row per jurisdiction. The state-published layer is deliberately NOT comparable across states and is never ranked; the helpline layer is. 'N/A' never means zero harm and never means we did not look.\n\nRows: 51. Refresh cadence: monthly.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 16569,
+      "hash": "sha256:5602311ea07d7223b7a1ecdd818b684a5e95e783ec53bd2c197456e0f30f9f7c",
+      "dialect": {
+        "delimiter": ",",
+        "header": true
+      },
+      "schema": {
+        "$schema": "https://datapackage.org/profiles/2.0/tableschema.json",
+        "fieldsMatch": "equal",
+        "missingValues": [
+          {
+            "value": "",
+            "label": "not applicable or not recorded for this row"
+          },
+          {
+            "value": "N/A",
+            "label": "checked; the publisher publishes nothing"
+          },
+          {
+            "value": "not extracted",
+            "label": "a series is believed to exist but could not be retrieved"
+          },
+          {
+            "value": "not published",
+            "label": "the publisher documents the mechanic but not this parameter"
+          }
+        ],
+        "primaryKey": [
+          "state"
+        ],
+        "fields": [
+          {
+            "name": "state",
+            "type": "string",
+            "title": "Jurisdiction",
+            "description": "Name of the U.S. state or the District of Columbia. 51 rows, one per jurisdiction.",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "state_code",
+            "type": "string",
+            "title": "USPS code",
+            "description": "Two-letter USPS abbreviation. 'DC' for the District of Columbia.",
+            "constraints": {
+              "required": true,
+              "unique": true,
+              "pattern": "[A-Z]{2}"
+            }
+          },
+          {
+            "name": "helpline_contacts_2025",
+            "type": "integer",
+            "title": "Helpline contacts, CY2025",
+            "description": "Total contacts (calls, texts and chats) to the jurisdiction's problem-gambling helpline in calendar year 2025, as published in NCPG's annual helpline report (Appendix A), prepared by the Omni Institute. Unit: contacts. Comparable across states.",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "helpline_contacts_2024",
+            "type": "integer",
+            "title": "Helpline contacts, CY2024",
+            "description": "Same measure for calendar year 2024. Unit: contacts. Comparable across states.",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "helpline_rate_per_100k_2025",
+            "type": "number",
+            "title": "Helpline rate per 100k, CY2025",
+            "description": "CY2025 contacts per 100,000 residents, taken verbatim from NCPG's published rate rather than recomputed, so this file and NCPG always agree. Unit: contacts per 100,000 residents.",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "helpline_rate_per_100k_2024",
+            "type": "number",
+            "title": "Helpline rate per 100k, CY2024",
+            "description": "Same measure for CY2024. Unit: contacts per 100,000 residents.",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "helpline_yoy_change",
+            "type": "string",
+            "title": "Year-over-year change",
+            "description": "NCPG's own Poisson significance test on the 2024 to 2025 change, reproduced verbatim. Typical values: 'increase, p<.001', 'decrease, p<.001', 'no significant change'. Not recomputed by Betttr."
+          },
+          {
+            "name": "state_funds_pg_services_fy2025",
+            "type": "string",
+            "title": "Dedicated public funding, FY2025",
+            "description": "Whether the jurisdiction had dedicated public funding for problem-gambling services in fiscal year 2025.",
+            "categories": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "name": "publication_tier",
+            "type": "string",
+            "title": "Publication tier",
+            "description": "Betttr's four-way classification of what the jurisdiction publishes about gambling harm. A = publishes a recurring, dated count. B = publishes something stale or partial. C = publishes nothing we could find after checking the behavioral-health agency, the gaming regulator or lottery, and the state council. U = a series is believed to exist but could not be retrieved (blocked fetch, image-only, or viewer with no text layer).",
+            "categories": [
+              "A",
+              "B",
+              "C",
+              "U"
+            ],
+            "categoriesOrdered": false
+          },
+          {
+            "name": "state_published_indicator",
+            "type": "string",
+            "title": "State-published indicator",
+            "description": "What the jurisdiction itself publishes, in its own terms, e.g. 'Self-exclusion enrollments', 'Helpline calls', 'Treatment admissions', or 'None published'."
+          },
+          {
+            "name": "state_published_latest_value",
+            "type": "string",
+            "title": "Latest state-published value",
+            "description": "The most recent value the jurisdiction published for that indicator, as a string because the file carries four distinct non-numeric markers alongside real numbers: 'N/A - state publishes nothing', 'not extracted', 'not published in readable form', and 'not comparable'. None of these means zero. Values in this column are NOT comparable across jurisdictions and are never ranked."
+          },
+          {
+            "name": "state_published_latest_period",
+            "type": "string",
+            "title": "Period covered",
+            "description": "The exact period the value covers, as the publisher states it, e.g. 'CY2025', 'FY2026', 'as of 9/2/2026'. 'unknown' where the publisher gives no period. No value appears in this file without a period."
+          },
+          {
+            "name": "state_publisher",
+            "type": "string",
+            "title": "Publishing body",
+            "description": "The agency, regulator, lottery or council that published the value."
+          },
+          {
+            "name": "state_source_url",
+            "type": "string",
+            "title": "Source URL",
+            "description": "URL of the source document or page for the state-published value. 'N/A' where nothing is published.",
+            "format": "uri"
+          },
+          {
+            "name": "machine_readable",
+            "type": "string",
+            "title": "Machine-readable at source",
+            "description": "Whether the jurisdiction publishes this indicator in a machine-readable format (CSV, JSON, API, or an extractable HTML table) as opposed to a PDF, image or viewer.",
+            "categories": [
+              "Y",
+              "N"
+            ]
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "title": "Notes",
+            "description": "Free text: what was checked, what was blocked, scope caveats, and why a marker was used."
+          }
+        ]
+      }
+    },
+    {
+      "$schema": "https://datapackage.org/profiles/2.0/dataresource.json",
+      "name": "sportsbook-rg-tools",
+      "type": "table",
+      "path": "data/sportsbook-rg-tools.csv",
+      "title": "Sportsbook Responsible-Gambling Tool Matrix",
+      "description": "Which responsible-gambling tools each major U.S. sportsbook, daily-fantasy and prediction operator publishes: deposit, loss, wager and time limits, cool-off, in-product self-exclusion, whether a written self-exclusion request is accepted, the account-closure path, and the documented navigation to reach any of it. Every claim carries the operator-published URL it came from. Where an operator documents a mechanic but not its parameters, the cell says 'not published' rather than guessing, and that absence is itself the finding.\n\nRows: 14. Refresh cadence: quarterly.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 34653,
+      "hash": "sha256:50ddc0412d0bc007f004d3331b5c1f68680aceaff78e934f1476574ea51b7ef7",
+      "dialect": {
+        "delimiter": ",",
+        "header": true
+      },
+      "schema": {
+        "$schema": "https://datapackage.org/profiles/2.0/tableschema.json",
+        "fieldsMatch": "equal",
+        "missingValues": [
+          {
+            "value": "",
+            "label": "not applicable or not recorded for this row"
+          },
+          {
+            "value": "N/A",
+            "label": "checked; the publisher publishes nothing"
+          },
+          {
+            "value": "not extracted",
+            "label": "a series is believed to exist but could not be retrieved"
+          },
+          {
+            "value": "not published",
+            "label": "the publisher documents the mechanic but not this parameter"
+          }
+        ],
+        "primaryKey": [
+          "operator"
+        ],
+        "fields": [
+          {
+            "name": "operator",
+            "type": "string",
+            "title": "Operator",
+            "description": "Consumer-facing brand name of the US sportsbook, daily-fantasy or prediction operator.",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "parent_company",
+            "type": "string",
+            "title": "Parent company",
+            "description": "Corporate parent as publicly stated."
+          },
+          {
+            "name": "product_type",
+            "type": "string",
+            "title": "Product types",
+            "description": "Semicolon- or comma-separated list of products the brand operates, e.g. 'Sportsbook, casino, DFS'."
+          },
+          {
+            "name": "deposit_limit",
+            "type": "string",
+            "title": "Deposit limit offered",
+            "description": "Whether the operator publishes a self-serve deposit limit. Y, N, or a short qualified string."
+          },
+          {
+            "name": "deposit_limit_periods",
+            "type": "string",
+            "title": "Deposit limit periods",
+            "description": "The limit periods offered (daily / weekly / monthly) and the scope the limit applies to, in the operator's own terms."
+          },
+          {
+            "name": "deposit_increase_delay",
+            "type": "string",
+            "title": "Friction on increasing a limit",
+            "description": "What happens when the user raises a limit: the cooling-off mechanic, the waiting period, and any confirmation step. 'not published' where the operator does not state it."
+          },
+          {
+            "name": "deposit_limit_source",
+            "type": "string",
+            "title": "Source URL(s)",
+            "description": "One or more operator-published URLs, separated by ' | ', documenting the deposit-limit claim."
+          },
+          {
+            "name": "loss_or_wager_limit",
+            "type": "string",
+            "title": "Loss or wager limit offered",
+            "description": "Whether a loss limit, a wager (spend) limit, or both are published, with the operator's own description of the mechanic."
+          },
+          {
+            "name": "loss_or_wager_limit_source",
+            "type": "string",
+            "title": "Source URL(s)",
+            "description": "Operator-published URLs, ' | '-separated."
+          },
+          {
+            "name": "time_session_limit_or_reality_check",
+            "type": "string",
+            "title": "Time limit or reality check",
+            "description": "Whether a time limit, session limit or reality-check pop-up is published, and what it does."
+          },
+          {
+            "name": "time_session_source",
+            "type": "string",
+            "title": "Source URL(s)",
+            "description": "Operator-published URLs, ' | '-separated."
+          },
+          {
+            "name": "cooloff_timeout",
+            "type": "string",
+            "title": "Cool-off / timeout offered",
+            "description": "Whether a short-term break (cool-off, timeout) distinct from self-exclusion is published."
+          },
+          {
+            "name": "cooloff_durations",
+            "type": "string",
+            "title": "Cool-off durations",
+            "description": "The duration menu offered, or 'not published' where the operator documents the mechanic but not the lengths."
+          },
+          {
+            "name": "cooloff_source",
+            "type": "string",
+            "title": "Source URL(s)",
+            "description": "Operator-published URLs, ' | '-separated."
+          },
+          {
+            "name": "self_exclusion_in_app",
+            "type": "string",
+            "title": "In-product self-exclusion",
+            "description": "Whether self-exclusion can be started inside the operator's own product."
+          },
+          {
+            "name": "self_exclusion_durations",
+            "type": "string",
+            "title": "Self-exclusion durations",
+            "description": "The duration menu, as published. Frequently 'not published'."
+          },
+          {
+            "name": "self_exclusion_reversible",
+            "type": "string",
+            "title": "Reversible before term ends",
+            "description": "Whether the operator states the exclusion can be lifted before the chosen period ends, and what it covers."
+          },
+          {
+            "name": "self_exclusion_source",
+            "type": "string",
+            "title": "Source URL(s)",
+            "description": "Operator-published URLs, ' | '-separated."
+          },
+          {
+            "name": "accepts_written_self_exclusion_email",
+            "type": "string",
+            "title": "Accepts a written self-exclusion request",
+            "description": "Whether the operator accepts a self-exclusion request sent by email. Sourced from the Betttr self-exclusion directory, not from an operator help page.",
+            "categories": [
+              "Y",
+              "N"
+            ]
+          },
+          {
+            "name": "written_self_exclusion_address",
+            "type": "string",
+            "title": "Written request address",
+            "description": "The email address the operator accepts written self-exclusion requests at. Empty where the operator does not accept one."
+          },
+          {
+            "name": "written_self_exclusion_source",
+            "type": "string",
+            "title": "Source for the written-request columns",
+            "description": "Provenance for the two preceding columns."
+          },
+          {
+            "name": "account_closure_path",
+            "type": "string",
+            "title": "Account closure path",
+            "description": "How a user closes the account as distinct from self-excluding, and whether that path is self-serve."
+          },
+          {
+            "name": "account_closure_source",
+            "type": "string",
+            "title": "Source URL(s)",
+            "description": "Operator-published URLs, ' | '-separated."
+          },
+          {
+            "name": "rg_tools_nav_path",
+            "type": "string",
+            "title": "Navigation path to the tools",
+            "description": "The documented tap path to reach the responsible-gambling controls inside the product. 'not published' is common and is itself the finding."
+          },
+          {
+            "name": "rg_nav_source",
+            "type": "string",
+            "title": "Source URL(s)",
+            "description": "Operator-published URLs, ' | '-separated."
+          },
+          {
+            "name": "rg_page_url",
+            "type": "string",
+            "title": "Responsible-gambling page",
+            "description": "The operator's public responsible-gambling hub. ' | '-separated where more than one exists."
+          },
+          {
+            "name": "rg_page_date_visible",
+            "type": "string",
+            "title": "Date visible on the RG page",
+            "description": "Whether the operator's RG page carries a last-modified or version date, and what it says. Usually 'not published'."
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "title": "Notes",
+            "description": "Free text: what stands out about this operator relative to the rest of the set, and what could not be verified."
+          }
+        ]
+      }
+    },
+    {
+      "$schema": "https://datapackage.org/profiles/2.0/dataresource.json",
+      "name": "recovery-glossary",
+      "type": "table",
+      "path": "data/recovery-glossary.csv",
+      "title": "Gambling Recovery Glossary",
+      "description": "125 gambling-recovery and gambling-industry terms with a plain-English definition, a stigma-preferred phrasing note, and a source or an explicit unsourced marker. Four sections: recovery language, industry and product terms, regulators and clinical instruments, and stigma-preferred language pairs. Intended for journalists, clinicians and researchers who need one defensible definition of a term like 'chasing losses' or 'self-exclusion' and a defensible way to write about the people affected.\n\nRows: 125. Refresh cadence: as needed; reviewed quarterly.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 52041,
+      "hash": "sha256:9ff70ae6c1bb0be66b4d24c9c3413a24ea7aa5416acf26f74af246ae5f9bca04",
+      "dialect": {
+        "delimiter": ",",
+        "header": true
+      },
+      "schema": {
+        "$schema": "https://datapackage.org/profiles/2.0/tableschema.json",
+        "fieldsMatch": "equal",
+        "missingValues": [
+          {
+            "value": "",
+            "label": "not applicable or not recorded for this row"
+          },
+          {
+            "value": "N/A",
+            "label": "checked; the publisher publishes nothing"
+          },
+          {
+            "value": "not extracted",
+            "label": "a series is believed to exist but could not be retrieved"
+          },
+          {
+            "value": "not published",
+            "label": "the publisher documents the mechanic but not this parameter"
+          }
+        ],
+        "primaryKey": [
+          "term"
+        ],
+        "fields": [
+          {
+            "name": "term",
+            "type": "string",
+            "title": "Term",
+            "description": "The glossary term, or the discouraged term where the row is a stigma-preferred language pair (section D).",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "preferred_term",
+            "type": "string",
+            "title": "Preferred term",
+            "description": "For section D rows only: the phrasing to use instead. Empty for sections A-C."
+          },
+          {
+            "name": "section_letter",
+            "type": "string",
+            "title": "Section letter",
+            "description": "A = recovery language (39 terms). B = industry and product terms (41). C = regulators, programs and clinical instruments (23). D = stigma-preferred language pairs (22).",
+            "categories": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "section",
+            "type": "string",
+            "title": "Section name",
+            "description": "Human-readable name of the section."
+          },
+          {
+            "name": "definition",
+            "type": "string",
+            "title": "Definition",
+            "description": "Plain-English definition written at roughly an 8th-grade reading level. Markdown emphasis has been stripped; internal quotation marks are preserved."
+          },
+          {
+            "name": "preferred_phrasing_note",
+            "type": "string",
+            "title": "Preferred phrasing note",
+            "description": "Guidance on what to say and what to avoid. 'safe to use as written' where the term carries no stigma. Empty where the source entry has no such line."
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "title": "Source URL",
+            "description": "First authoritative URL cited for the entry. Empty where the entry is unsourced.",
+            "format": "uri"
+          },
+          {
+            "name": "source_note",
+            "type": "string",
+            "title": "Source note",
+            "description": "The non-URL remainder of the source line, including the '[UNSOURCED - ...]' marker and its reason where present."
+          },
+          {
+            "name": "source_status",
+            "type": "string",
+            "title": "Source status",
+            "description": "sourced = an authoritative URL supports the definition. partial = a source supports the harm framing or the figures but not the mechanical definition. unsourced = no authoritative definitional source was located; the definition reflects consistent common usage and says so. 'n/a - language pair' = section D rows, which are editorial guidance rather than defined terms.",
+            "categories": [
+              "sourced",
+              "partial",
+              "unsourced",
+              "n/a - language pair"
+            ]
+          },
+          {
+            "name": "term_slug",
+            "type": "string",
+            "title": "URL slug",
+            "description": "Lowercase hyphenated slug, stable across releases, matching the per-term URL at https://betttr.net/glossary/<slug>/.",
+            "constraints": {
+              "unique": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$schema": "https://datapackage.org/profiles/2.0/dataresource.json",
+      "name": "quit-gambling-apps",
+      "type": "table",
+      "path": "data/quit-gambling-apps.csv",
+      "title": "Quit-Gambling App Panel",
+      "description": "A dated panel of apps surfaced on the U.S. iOS App Store by three seed searches: 'quit gambling', 'gambling blocker' and 'gambling addiction recovery'. 107 unique apps, of which 63 are gambling-specific harm-reduction tools after hand review. Carries release and update dates, rating counts, Apple genres and a hand-assigned classification. This is a panel of what those three searches surface, NOT a census of the store, because the Apple search endpoint returns at most 50 results per term. Treat all counts as a floor. Betttr's own app is in this panel, counted the same way as every other app, with no adjustment.\n\nRows: 107. Refresh cadence: monthly.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 31792,
+      "hash": "sha256:3d1bedc7db478e617b6872e08bb897df35c48f6b7335d6afcd3445ae573c7a2e",
+      "dialect": {
+        "delimiter": ",",
+        "header": true
+      },
+      "schema": {
+        "$schema": "https://datapackage.org/profiles/2.0/tableschema.json",
+        "fieldsMatch": "equal",
+        "missingValues": [
+          {
+            "value": "",
+            "label": "not applicable or not recorded for this row"
+          },
+          {
+            "value": "N/A",
+            "label": "checked; the publisher publishes nothing"
+          },
+          {
+            "value": "not extracted",
+            "label": "a series is believed to exist but could not be retrieved"
+          },
+          {
+            "value": "not published",
+            "label": "the publisher documents the mechanic but not this parameter"
+          }
+        ],
+        "primaryKey": [
+          "track_id"
+        ],
+        "fields": [
+          {
+            "name": "track_id",
+            "type": "integer",
+            "title": "Apple track ID",
+            "description": "Apple's numeric identifier for the app. Stable across releases and the join key for this file.",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "app_name",
+            "type": "string",
+            "title": "App name",
+            "description": "App title as listed on the U.S. iOS App Store on the pull date."
+          },
+          {
+            "name": "seller_name",
+            "type": "string",
+            "title": "Seller",
+            "description": "Seller name as Apple publishes it. Often an individual's name for solo-developer apps; reproduced as published."
+          },
+          {
+            "name": "bundle_id",
+            "type": "string",
+            "title": "Bundle identifier",
+            "description": "Reverse-DNS bundle identifier."
+          },
+          {
+            "name": "app_store_url",
+            "type": "string",
+            "title": "App Store URL",
+            "description": "Canonical U.S. App Store listing URL.",
+            "format": "uri"
+          },
+          {
+            "name": "release_date",
+            "type": "date",
+            "title": "First release date",
+            "description": "Date the app first appeared on the store (UTC, truncated to the day).",
+            "format": "default"
+          },
+          {
+            "name": "current_version_release_date",
+            "type": "date",
+            "title": "Current version date",
+            "description": "Date the listed version shipped (UTC, truncated to the day).",
+            "format": "default"
+          },
+          {
+            "name": "app_version",
+            "type": "string",
+            "title": "Version",
+            "description": "Version string of the listing on the pull date."
+          },
+          {
+            "name": "months_since_update",
+            "type": "number",
+            "title": "Months since update",
+            "description": "Months between current_version_release_date and the pull date, to one decimal. Unit: months.",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "launched_last_12_months",
+            "type": "string",
+            "title": "Launched in the last 12 months",
+            "description": "Derived from release_date against the pull date.",
+            "categories": [
+              "Y",
+              "N"
+            ]
+          },
+          {
+            "name": "stale_6mo",
+            "type": "string",
+            "title": "Not updated in 6+ months",
+            "description": "Derived from months_since_update >= 6.",
+            "categories": [
+              "Y",
+              "N"
+            ]
+          },
+          {
+            "name": "user_rating_count",
+            "type": "integer",
+            "title": "Ratings, all versions",
+            "description": "Count of user ratings across all versions on the U.S. store. Unit: ratings.",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "user_rating_count_current_version",
+            "type": "integer",
+            "title": "Ratings, current version",
+            "description": "Unit: ratings.",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "average_user_rating",
+            "type": "number",
+            "title": "Average rating",
+            "description": "Mean star rating, 0-5, at full published precision. Meaningless at low rating counts; the median app in this panel has 3 ratings.",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 5
+            }
+          },
+          {
+            "name": "primary_genre",
+            "type": "string",
+            "title": "Primary App Store genre",
+            "description": "Apple's primary genre, e.g. 'Health & Fitness'."
+          },
+          {
+            "name": "genres",
+            "type": "string",
+            "title": "All genres",
+            "description": "Semicolon-separated list of Apple genres."
+          },
+          {
+            "name": "app_store_category",
+            "type": "string",
+            "title": "Betttr classification",
+            "description": "Betttr's hand-reviewed classification. harm-reduction = a quit-gambling or gambling-recovery tool. gambling-product = a real-money or social-casino product returned by the search. not-gambling = unrelated. other = reviewed and none of the above.",
+            "categories": [
+              "harm-reduction",
+              "gambling-product",
+              "not-gambling",
+              "other"
+            ]
+          },
+          {
+            "name": "content_advisory_rating",
+            "type": "string",
+            "title": "Age rating",
+            "description": "Apple content advisory rating, e.g. '17+'."
+          },
+          {
+            "name": "minimum_ios_version",
+            "type": "string",
+            "title": "Minimum iOS version",
+            "description": "Minimum OS version the listing requires."
+          },
+          {
+            "name": "gambling_specific",
+            "type": "string",
+            "title": "Gambling-specific",
+            "description": "Y where the app name or the first 300 characters of its own description names gambling, betting, a sportsbook, a casino or wagering, AND the app is not in the Games/Casino category. General addiction and sobriety apps that merely list gambling among many behaviours are N and are named in the schema note.",
+            "categories": [
+              "Y",
+              "N"
+            ]
+          },
+          {
+            "name": "matched_search_terms",
+            "type": "string",
+            "title": "Matched search terms",
+            "description": "Semicolon-separated list of which of the three seed searches returned this app: 'quit gambling', 'gambling blocker', 'gambling addiction recovery'."
+          }
+        ]
+      }
+    },
+    {
+      "$schema": "https://datapackage.org/profiles/2.0/dataresource.json",
+      "name": "self-exclusion-programs",
+      "type": "table",
+      "path": "data/self-exclusion-programs.csv",
+      "title": "State and Multi-State Self-Exclusion Programs",
+      "description": "How to enroll in self-exclusion, by jurisdiction: the administering body, the enrollment method, the direct program URL and the scope of what the exclusion covers, plus one row for the multi-state National Voluntary Self-Exclusion Program and the states it reaches. This file is NOT yet a 50-state census; it covers the jurisdictions verified for the Betttr self-exclusion directory and is being extended toward full coverage. Absence of a state is absence of verification, not absence of a program.\n\nRows: 12. Refresh cadence: quarterly.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 2390,
+      "hash": "sha256:90c2a09fb00efb51a2c98029fa879f192f36a3ffccc2eb51314792a301484cb3",
+      "dialect": {
+        "delimiter": ",",
+        "header": true
+      },
+      "schema": {
+        "$schema": "https://datapackage.org/profiles/2.0/tableschema.json",
+        "fieldsMatch": "equal",
+        "missingValues": [
+          {
+            "value": "",
+            "label": "not applicable or not recorded for this row"
+          },
+          {
+            "value": "N/A",
+            "label": "checked; the publisher publishes nothing"
+          },
+          {
+            "value": "not extracted",
+            "label": "a series is believed to exist but could not be retrieved"
+          },
+          {
+            "value": "not published",
+            "label": "the publisher documents the mechanic but not this parameter"
+          }
+        ],
+        "primaryKey": [
+          "jurisdiction"
+        ],
+        "fields": [
+          {
+            "name": "jurisdiction",
+            "type": "string",
+            "title": "Jurisdiction",
+            "description": "State name, or the name of the multi-state program.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "jurisdiction_code",
+            "type": "string",
+            "title": "Code",
+            "description": "Two-letter USPS code for a state row; 'US' for the multi-state row."
+          },
+          {
+            "name": "jurisdiction_type",
+            "type": "string",
+            "title": "Row type",
+            "description": "state = a single-state program. multi-state = a program covering several states under one enrollment.",
+            "categories": [
+              "state",
+              "multi-state"
+            ]
+          },
+          {
+            "name": "administering_agency",
+            "type": "string",
+            "title": "Administering body",
+            "description": "The regulator, department or operator that runs the program."
+          },
+          {
+            "name": "enrollment_method",
+            "type": "string",
+            "title": "How to enroll",
+            "description": "Online, in person, notarized form by mail, or a combination, in the program's own terms."
+          },
+          {
+            "name": "program_url",
+            "type": "string",
+            "title": "Program URL",
+            "description": "Direct enrollment or program page. Empty where the program publishes no direct URL.",
+            "format": "uri"
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "title": "Notes",
+            "description": "Scope of the exclusion: which verticals it covers and whether separate tracks must be enrolled in individually."
+          },
+          {
+            "name": "participating_states",
+            "type": "string",
+            "title": "Participating states",
+            "description": "Multi-state rows only: semicolon-separated USPS codes of the states the single enrollment reaches. Empty for state rows."
+          }
+        ]
+      }
+    }
+  ]
+}

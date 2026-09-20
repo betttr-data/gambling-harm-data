@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the metadata from this file."
+title: "Gambling Harm Open Data"
+type: dataset
+abstract: >-
+  Five machine-readable datasets on gambling harm and gambling recovery in the
+  United States, published together and refreshed on a stated clock. The set
+  covers state-level gambling-harm publication and helpline contact volume for
+  all 50 states and the District of Columbia; the responsible-gambling tools
+  published by US sportsbook and daily-fantasy operators; a sourced glossary of
+  gambling-recovery and gambling-industry terminology with stigma-preferred
+  phrasing; a panel of quit-gambling apps listed on the US iOS App Store; and a
+  directory of state and multi-state self-exclusion programs. Every value in
+  every file carries the source it came from or an explicit marker saying why it
+  does not. Produced by Betttr LLC, maker of a recovery app; no operator or
+  affiliate money.
+authors:
+  - name: "Betttr LLC"
+    alias: Betttr
+    city: "Sherman Oaks"
+    region: "California"
+    country: US
+    email: support@betttr.net
+    website: "https://betttr.net"
+contact:
+  - name: "Betttr LLC"
+    email: support@betttr.net
+version: "2026.10.0"
+date-released: "2026-10-15"
+license: CC-BY-4.0
+license-url: "https://creativecommons.org/licenses/by/4.0/"
+identifiers:
+  - description: "The concept DOI of the dataset (resolves to all versions, always redirects to the latest)."
+    type: doi
+    value: "10.5281/zenodo.CONCEPT_DOI_PLACEHOLDER"
+  - description: "The versioned DOI for release 2026.10.0 of the dataset."
+    type: doi
+    value: "10.5281/zenodo.VERSION_DOI_PLACEHOLDER"
+  - description: "The dataset landing page."
+    type: url
+    value: "https://betttr.net/data/"
+repository-code: "https://github.com/betttr-data/gambling-harm-data"
+url: "https://betttr.net/data/"
+keywords:
+  - "gambling harm"
+  - "problem gambling"
+  - "gambling disorder"
+  - "sports betting"
+  - "self-exclusion"
+  - "responsible gambling"
+  - "helpline"
+  - "public health"
+  - "harm reduction"
+  - "United States"
