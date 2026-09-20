@@ -25,15 +25,15 @@ authors:
 contact:
   - name: "Betttr LLC"
     email: support@betttr.net
-version: "2026.10.0"
-date-released: "2026-10-15"
+version: "2026.9.0"
+date-released: "2026-09-21"
 license: CC-BY-4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 identifiers:
   - description: "The concept DOI of the dataset (resolves to all versions, always redirects to the latest)."
     type: doi
     value: "10.5281/zenodo.CONCEPT_DOI_PLACEHOLDER"
-  - description: "The versioned DOI for release 2026.10.0 of the dataset."
+  - description: "The versioned DOI for release 2026.9.0 of the dataset."
     type: doi
     value: "10.5281/zenodo.VERSION_DOI_PLACEHOLDER"
   - description: "The dataset landing page."

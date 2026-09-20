@@ -7,7 +7,7 @@
 Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together, refreshed on a stated clock, free, with no registration and no rate limit.
 
 **Landing page:** https://betttr.net/data/
-**Current release:** `2026.10.0` — 15 October 2026
+**Current release:** `2026.9.0` — 21 September 2026
 **Contact and corrections:** support@betttr.net
 
 Every source this project draws on is a PDF. If this were also a PDF it would have added nothing. The CSV is the point.
@@ -36,7 +36,7 @@ https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/quit-
 https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/self-exclusion-programs.csv
 ```
 
-`main` always points at the newest release. For a frozen copy, use a tag: replace `main` with `v2026.10.0`, or cite the version DOI.
+`main` always points at the newest release. For a frozen copy, use a tag: replace `main` with `v2026.9.0`, or cite the version DOI.
 
 ---
 
@@ -44,7 +44,7 @@ https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/self-
 
 **APA 7**
 
-> Betttr LLC. (2026). *Gambling Harm Open Data* (Version 2026.10.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.VERSION_DOI_PLACEHOLDER
+> Betttr LLC. (2026). *Gambling Harm Open Data* (Version 2026.9.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.VERSION_DOI_PLACEHOLDER
 
 To cite the dataset in general rather than one release, use the concept DOI, which always resolves to the latest version:
 
@@ -59,7 +59,7 @@ To cite the dataset in general rather than one release, use the concept DOI, whi
   year      = {2026},
   month     = {10},
   publisher = {Zenodo},
-  version   = {2026.10.0},
+  version   = {2026.9.0},
   doi       = {10.5281/zenodo.VERSION_DOI_PLACEHOLDER},
   url       = {https://doi.org/10.5281/zenodo.VERSION_DOI_PLACEHOLDER}
 }
@@ -67,9 +67,9 @@ To cite the dataset in general rather than one release, use the concept DOI, whi
 
 **Citing one file.** Name it, so a reader can find the same numbers:
 
-> Betttr LLC. (2026). Gambling Harm Index [Data file]. In *Gambling Harm Open Data* (Version 2026.10.0). Zenodo. https://doi.org/10.5281/zenodo.VERSION_DOI_PLACEHOLDER
+> Betttr LLC. (2026). Gambling Harm Index [Data file]. In *Gambling Harm Open Data* (Version 2026.9.0). Zenodo. https://doi.org/10.5281/zenodo.VERSION_DOI_PLACEHOLDER
 
-**In a news story,** this is enough: *Gambling Harm Open Data, Betttr LLC, October 2026* — with a link to https://betttr.net/data/. Journalists do not need to ask permission, and do not need to email us first.
+**In a news story,** this is enough: *Gambling Harm Open Data, Betttr LLC, September 2026* — with a link to https://betttr.net/data/. Journalists do not need to ask permission, and do not need to email us first.
 
 GitHub's "Cite this repository" button reads [`CITATION.cff`](CITATION.cff) and will generate both formats for you.
 
@@ -145,7 +145,7 @@ A method change is dated, listed, and **never applied retroactively to a publish
 
 A monthly clock does not mean monthly data. Most underlying sources are annual. Each monthly release records what was newly published in the preceding month, restates the standing figures, and notes what changed. **In a month where nothing new is published anywhere, the release says that** — and that is a real finding about the state of the field.
 
-Every release is tagged (`v2026.10.0`), archived on Zenodo, and gets its own version DOI. Nothing is overwritten.
+Every release is tagged (`v2026.9.0`), archived on Zenodo, and gets its own version DOI. Nothing is overwritten.
 
 ---
 
@@ -171,4 +171,4 @@ See [`CHANGELOG.md`](CHANGELOG.md).
 
 | Version | Date | Summary |
 |---|---|---|
-| `2026.10.0` | 2026-10-15 | First public release. Five datasets, 309 rows, Frictionless descriptor, Zenodo DOI. |
+| `2026.9.0` | 2026-09-21 | First public release. Five datasets, 309 rows, Frictionless descriptor, Zenodo DOI. |

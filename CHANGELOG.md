@@ -10,12 +10,12 @@ Format: [Keep a Changelog](https://keepachangelog.com/). Versioning: `YYYY.M.PAT
 
 ---
 
-## [2026.10.0] — 2026-10-15
+## [2026.9.0] — 2026-09-21
 
 First public release.
 
 ### Added
-- `data/gambling-harm-index.csv` — 51 rows (50 states + DC), 16 columns. October 2026 edition. Helpline layer from NCPG Appendix A (CY2024 and CY2025 contacts, rate per 100k, NCPG's own Poisson test). State-published layer with per-row source URL, period, publisher and publication tier.
+- `data/gambling-harm-index.csv` — 51 rows (50 states + DC), 16 columns. September 2026 baseline edition. Helpline layer from NCPG Appendix A (CY2024 and CY2025 contacts, rate per 100k, NCPG's own Poisson test). State-published layer with per-row source URL, period, publisher and publication tier.
 - `data/sportsbook-rg-tools.csv` — 14 operators, 28 columns. 2026-Q3 edition. Documentation-only; no dated screenshots in this release.
 - `data/recovery-glossary.csv` — 125 terms across four sections, 10 columns. 32 entries carry a source flag (25 unsourced, 7 partial) and say so.
 - `data/quit-gambling-apps.csv` — 107 apps, 21 columns. Panel pulled 2026-09-20 from three seed searches against the Apple iTunes Search API.
@@ -26,7 +26,7 @@ First public release.
 - `LICENSE` — CC BY 4.0 full legal text.
 
 ### Notes on this release
-- **DOI placeholders.** `CONCEPT_DOI_PLACEHOLDER` and `VERSION_DOI_PLACEHOLDER` appear in `README.md`, `CITATION.cff` and `datapackage.json`. Zenodo mints both DOIs only when the first tagged release is archived, so they are filled in immediately afterwards and shipped as `2026.10.1`. Anything citing `2026.10.0` should cite the concept DOI.
+- **DOI placeholders.** `CONCEPT_DOI_PLACEHOLDER` and `VERSION_DOI_PLACEHOLDER` appear in `README.md`, `CITATION.cff` and `datapackage.json`. Zenodo mints both DOIs only when the first tagged release is archived, so they are filled in immediately afterwards and shipped as `2026.9.1`. Anything citing `2026.9.0` should cite the concept DOI.
 - **`self-exclusion-programs.csv` is not a 50-state census.** 11 jurisdictions verified. Absence of a state is absence of verification, not absence of a program. This is the largest open gap in the release.
 - **`quit-gambling-apps.csv` is a panel, not a census.** The Apple search endpoint caps at 50 results per term. Every count derived from it is a floor.
 - **No composite score anywhere**, and no ranking on the state-published layer, by design.
