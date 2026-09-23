@@ -37,3 +37,9 @@ First public release.
 - 25 unsourced glossary entries, 21 of them sports-betting jargon with no authoritative definitional body. Two clinical instruments (SOGS, Lie/Bet) need a primary-source pass and should not be cited from this file until they get one.
 - Sportsbook RG Tools has no dated screenshots and no per-state parameter values; operators generally do not publish either.
 - Self-exclusion durations and reinstatement rules are not yet captured.
+
+## [2026.9.1] — 2026-09-23 — corrections (applied; the 2026.9.0 archive is unchanged)
+- `datapackage.json`: recomputed `bytes`/`sha256` for `gambling-harm-index.csv` (corrected rows) and `sportsbook-rg-tools.csv` (the 2026-09-21 Fanatics written-self-exclusion correction had left its hash stale).
+- **Ohio (OH) — APPLIED 2026-09-23:** Commission publishes MONTHLY Time Out Ohio VEP statistics (Statistics tab, https://casinocontrol.ohio.gov/responsible-gambling/06-resources-reports-statistics) and FY totals in annual reports (https://casinocontrol.ohio.gov/about/ar/05-annual-reports). Our "self-exclusion not published" marker was wrong → add monthly VEP series; credit Ohio Casino Control Commission (Nabil Pervaiz, RG Manager, 2026-09-22).
+- **Maryland (MD) — APPLIED 2026-09-23:** Monthly VEP enrollment is published inside Commission meeting records (https://www.mdgaming.com/commission/meeting-minutes-documents/, Managing Director of Gaming section) → add; decide/describe "published in meeting records" as a source class; credit Maryland Lottery and Gaming (Seth Elkin, 2026-09-22).
+- **Virginia (VA) — APPLIED 2026-09-23:** Add the Virginia Partnership for Gaming & Health treatment/recovery dashboard (https://vpgh.vcu.edu/) as a treatment series; credit VPGH/VCU (Carolyn Hawley, 2026-09-22). Dashboard is a live Tableau view; recorded as a source, no static value.
