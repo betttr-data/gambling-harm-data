@@ -36,7 +36,7 @@ https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/quit-
 https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/self-exclusion-programs.csv
 ```
 
-`main` always points at the newest release. For a frozen copy, use a tag: replace `main` with `v2026.9.0`, or cite the version DOI.
+`main` always points at the newest release. For a frozen copy, use a tag: replace `main` with `v2026.9.1`, or cite the version DOI.
 
 ---
 
@@ -44,7 +44,7 @@ https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/self-
 
 **APA 7**
 
-> Betttr LLC. (2026). *Gambling Harm Open Data* (Version 2026.9.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22857768
+> Betttr LLC. (2026). *Gambling Harm Open Data* (Version 2026.9.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22908453
 
 To cite the dataset in general rather than one release, use the concept DOI, which always resolves to the latest version:
 
@@ -59,9 +59,9 @@ To cite the dataset in general rather than one release, use the concept DOI, whi
   year      = {2026},
   month     = {10},
   publisher = {Zenodo},
-  version   = {2026.9.0},
-  doi       = {10.5281/zenodo.22857768},
-  url       = {https://doi.org/10.5281/zenodo.22857768}
+  version   = {2026.9.1},
+  doi       = {10.5281/zenodo.22908453},
+  url       = {https://doi.org/10.5281/zenodo.22908453}
 }
 ```
 

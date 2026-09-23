@@ -33,9 +33,9 @@ identifiers:
   - description: "The concept DOI of the dataset (resolves to all versions, always redirects to the latest)."
     type: doi
     value: "10.5281/zenodo.22857767"
-  - description: "The versioned DOI for release 2026.9.0 of the dataset."
+  - description: "The versioned DOI for release 2026.9.1 of the dataset."
     type: doi
-    value: "10.5281/zenodo.22857768"
+    value: "10.5281/zenodo.22908453"
   - description: "The dataset landing page."
     type: url
     value: "https://betttr.net/data/"
