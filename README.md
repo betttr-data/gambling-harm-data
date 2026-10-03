@@ -75,6 +75,10 @@ GitHub's "Cite this repository" button reads [`CITATION.cff`](CITATION.cff) and 
 
 ---
 
+## Citing the helpline layer
+
+**NCPG attribution note (requested by NCPG Public Affairs, 2026-10-02; include wherever helpline contact volumes from this file are cited):** "NCPG reporting includes traffic to 1-800-GAMBLER from June 1, 2023, through September 30, 2025, when it served as the National Problem Gambling Helpline. Effective October 1, 2025, traffic to 1-800-GAMBLER is no longer included in NCPG reporting. As a result, changes in reported contact volume after this date reflect a change in reporting methodology and should not be interpreted as a decrease in overall help-seeking activity." The CY2025 column in this file therefore covers a transition year; year-over-year comparisons involving 2025 and later carry this caveat.
+
 ## License
 
 **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)** — full text in [`LICENSE`](LICENSE). SPDX: `CC-BY-4.0`.

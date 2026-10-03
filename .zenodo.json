@@ -1,0 +1,18 @@
+{
+  "upload_type": "dataset",
+  "title": "Gambling Harm Open Data",
+  "creators": [
+    { "name": "Betttr LLC" }
+  ],
+  "description": "Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together and refreshed on a stated clock (new edition on the 15th of each month). gambling-harm-index.csv: what each of the 50 states and DC publishes about gambling harm (helpline contacts from NCPG Appendix A; state-published self-exclusion, treatment and helpline series with a source URL per row and a publication tier; 'not published' recorded as a finding). sportsbook-rg-tools.csv: the responsible-gambling tools published by US sportsbook and daily-fantasy operators. recovery-glossary.csv: a sourced glossary of gambling-recovery and gambling-industry terminology with stigma-preferred phrasing. quit-gambling-apps.csv: a panel of quit-gambling apps on the US iOS App Store. self-exclusion-programs.csv: a directory of verified state and multi-state self-exclusion programs (not yet a 50-state census). Every value carries the source it came from or an explicit marker saying why it does not. Corrections are appended in new releases with dated notes and credit; prior releases stay live at their version DOI. Produced by Betttr LLC, maker of a gambling-recovery app; no operator or affiliate funding.",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": ["gambling harm", "problem gambling", "gambling disorder", "sports betting", "self-exclusion", "responsible gambling", "helpline", "public health", "harm reduction", "open data", "United States"],
+  "related_identifiers": [
+    { "identifier": "https://betttr.net/data/", "relation": "isDescribedBy", "resource_type": "publication-other" },
+    { "identifier": "https://betttr.net/harm-index/", "relation": "isDescribedBy", "resource_type": "publication-other" },
+    { "identifier": "https://huggingface.co/datasets/betttr/gambling-harm-open-data", "relation": "isIdenticalTo", "resource_type": "dataset" },
+    { "identifier": "10.7910/DVN/WDVJLU", "relation": "isIdenticalTo", "resource_type": "dataset", "scheme": "doi" }
+  ],
+  "notes": "Resource type was recorded as Software on the 2026.9.0 and 2026.9.1 Zenodo versions because the GitHub integration defaulted it; this file sets it to Dataset from the next release. Cite the concept DOI 10.5281/zenodo.22857767 for the newest edition."
+}
