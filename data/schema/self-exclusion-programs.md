@@ -1,7 +1,7 @@
 # Schema — `self-exclusion-programs.csv`
 
 **Resource name:** `self-exclusion-programs`
-**Rows:** 12 — 11 state programs + 1 multi-state program
+**Rows:** 38 — 37 jurisdiction rows (36 states + DC) + 1 multi-state program (edition 2026.10.0 working copy; was 12 in 2026.9.x)
 **Primary key:** `jurisdiction`
 **Refresh cadence:** quarterly
 **Encoding:** UTF-8, comma-delimited, header row
@@ -39,11 +39,11 @@ Read column 7 before treating any two rows as comparable. There is no column tha
 
 ## Known gaps
 
-1. **This is not yet a 50-state census.** 11 state rows. It covers the jurisdictions verified for the Betttr self-exclusion directory and is being extended toward full coverage. **Absence of a state here is absence of verification, not absence of a program** — most U.S. states with legal gambling operate one. Do not compute a "share of states with self-exclusion" from this file.
+1. **Now 37 jurisdiction rows (36 states + DC), from 11; with the 14 no-program states listed below, all 50 states and DC are classified.** Added 2026-10-03 from official regulator/lottery pages: AZ, CA (card rooms only), DC, DE, GA (lottery only), IA, KS, KY (statewide list, operator-level enrollment), LA, ME, MO, MS, MT (rule only, no public enrollment page), NC, NE and WY (via NVSEP), NH, NM, OK (nonprofit-administered casino list + Lottery), RI, SD, TN, VA, VT, WA, WV. States with **no statewide program** as of 2026-10-03, per their regulator or lottery pages: AK, AL, AR (statewide list authorized by Act 798 of 2025, rules still draft), FL (operator-level only), HI, ID, MN, ND, NV (operator registers only), OR (operator-level in the Lottery's DraftKings app), SC, TX, UT, WI, WI. Where a field could not be confirmed on an official page it is marked UNVERIFIED inside `notes`. Absence of a state here still means absence of a *statewide* program, not that no operator offers exclusion.
 2. **Enrollment methods change without notice** and several states are mid-migration from notarized paper to online portals. Quarterly refresh is the mitigation; each edition is dated.
 3. **No enrollment volumes.** Counts of people enrolled live in `gambling-harm-index.csv`, where they are published at all, and are not comparable across states.
-4. **No durations.** The term lengths offered (one year, five years, lifetime) vary by state and by track and are not captured in this edition. Planned addition.
-5. **No reinstatement rules.** Whether and how a person can come off the list after the term ends is a materially different policy in each state and is not captured here.
+4. **Durations and reinstatement rules now live in `notes`** (added 2026-10-03) rather than in their own columns; a structured `durations` / `removal` pair is planned once every row has them verified.
+5. **Reinstatement rules are in `notes` where verified**; several rows say UNVERIFIED.
 6. **Operator-level self-exclusion is a different file.** For what each sportsbook offers inside its own product, and which operators accept a written request, see `sportsbook-rg-tools.csv` (columns 15–21).
 7. **Empty `program_url` is meaningful.** Indiana, New York and Illinois rows carry no URL because the program does not publish a single stable enrollment page; `enrollment_method` and `notes` carry the path instead.
 

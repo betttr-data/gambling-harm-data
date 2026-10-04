@@ -807,8 +807,8 @@
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
-      "bytes": 2390,
-      "hash": "sha256:90c2a09fb00efb51a2c98029fa879f192f36a3ffccc2eb51314792a301484cb3",
+      "bytes": 19565,
+      "hash": "sha256:53291c941c38408306fa740d21ebb1d8d3e74e1327e867b99421616546d2e7d3",
       "dialect": {
         "delimiter": ",",
         "header": true
