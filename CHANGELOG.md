@@ -44,6 +44,10 @@ First public release.
 - **Maryland (MD) — APPLIED 2026-09-23:** Monthly VEP enrollment is published inside Commission meeting records (https://www.mdgaming.com/commission/meeting-minutes-documents/, Managing Director of Gaming section) → add; decide/describe "published in meeting records" as a source class; credit Maryland Lottery and Gaming (Seth Elkin, 2026-09-22).
 - **Virginia (VA) — APPLIED 2026-09-23:** Add the Virginia Partnership for Gaming & Health treatment/recovery dashboard (https://vpgh.vcu.edu/) as a treatment series; credit VPGH/VCU (Carolyn Hawley, 2026-09-22). Dashboard is a live Tableau view; recorded as a source, no static value.
 
+## [2026.10.1] — 2026-10-04
+
+Vermont tier C → A (annual Act 63 report to the legislature carries helpline engagements and self-exclusion sign-ups; credit Vermont Department of Mental Health). Tier counts A24 / B11 / C16. Headline: 16 of 51 publish no recurring count; 9 of those fund problem-gambling services.
+
 ## [2026.10.0] — 2026-10-04
 
 Every U.S. state and DC is now classified in both the Harm Index and the self-exclusion directory. The dated notes below this section are the detail; this is what ships.

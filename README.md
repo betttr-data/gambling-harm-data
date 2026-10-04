@@ -7,7 +7,7 @@
 Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together, refreshed on a stated clock, free, with no registration and no rate limit.
 
 **Landing page:** https://betttr.net/data/
-**Current release:** `2026.10.0` — 4 October 2026 (every state classified; Colorado resolved; self-exclusion directory 12 → 38 rows; see CHANGELOG)
+**Current release:** `2026.10.1` — 4 October 2026 (Vermont correction: tier C → A; headline now 16 of 51 / 9 fund; see CHANGELOG)
 **Contact and corrections:** support@betttr.net
 
 Every source this project draws on is a PDF. If this were also a PDF it would have added nothing. The CSV is the point.
