@@ -1,6 +1,8 @@
 {
   "upload_type": "dataset",
   "title": "Gambling Harm Open Data",
+  "version": "2026.10.0",
+  "publication_date": "2026-10-04",
   "creators": [
     { "name": "Betttr LLC" }
   ],

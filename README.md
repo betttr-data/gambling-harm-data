@@ -7,7 +7,7 @@
 Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together, refreshed on a stated clock, free, with no registration and no rate limit.
 
 **Landing page:** https://betttr.net/data/
-**Current release:** `2026.9.1` — 23 September 2026 (corrections to OH, MD, VA rows; see CHANGELOG)
+**Current release:** `2026.10.0` — 4 October 2026 (every state classified; Colorado resolved; self-exclusion directory 12 → 38 rows; see CHANGELOG)
 **Contact and corrections:** support@betttr.net
 
 Every source this project draws on is a PDF. If this were also a PDF it would have added nothing. The CSV is the point.
@@ -22,7 +22,7 @@ Every source this project draws on is a PDF. If this were also a PDF it would ha
 | [`data/sportsbook-rg-tools.csv`](data/sportsbook-rg-tools.csv) | 14 | Which responsible-gambling tools each major U.S. sportsbook and DFS operator publishes — limits, cool-off, self-exclusion, closure path, and the navigation to reach them. Every claim carries the operator URL it came from. | **Quarterly** |
 | [`data/recovery-glossary.csv`](data/recovery-glossary.csv) | 125 | Gambling-recovery and gambling-industry terms with a plain definition, a stigma-preferred phrasing, and a source or an explicit unsourced marker. | **As needed**, reviewed quarterly |
 | [`data/quit-gambling-apps.csv`](data/quit-gambling-apps.csv) | 107 | A dated panel of quit-gambling apps on the U.S. iOS App Store — release and update dates, rating counts, classification. | **Monthly**, with the Index |
-| [`data/self-exclusion-programs.csv`](data/self-exclusion-programs.csv) | 12 | How to enroll in self-exclusion by jurisdiction, plus the multi-state NVSEP and the states it reaches. | **Quarterly** |
+| [`data/self-exclusion-programs.csv`](data/self-exclusion-programs.csv) | 38 | How to enroll in self-exclusion by jurisdiction, plus the multi-state NVSEP and the states it reaches. | **Quarterly** |
 
 Each file has a plain-language column dictionary in [`data/schema/`](data/schema/) documenting every column, its units, its missing-value markers, and its known gaps. Machine-readable field schemas for all five are in [`datapackage.json`](datapackage.json) ([Frictionless Data Package v2](https://datapackage.org/)).
 
@@ -36,7 +36,7 @@ https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/quit-
 https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/self-exclusion-programs.csv
 ```
 
-`main` always points at the newest release. For a frozen copy, use a tag: replace `main` with `v2026.9.1`, or cite the version DOI.
+`main` always points at the newest release. For a frozen copy, use a tag: replace `main` with `v2026.10.0`, or cite the version DOI.
 
 ---
 

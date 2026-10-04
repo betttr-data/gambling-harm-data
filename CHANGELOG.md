@@ -44,6 +44,21 @@ First public release.
 - **Maryland (MD) — APPLIED 2026-09-23:** Monthly VEP enrollment is published inside Commission meeting records (https://www.mdgaming.com/commission/meeting-minutes-documents/, Managing Director of Gaming section) → add; decide/describe "published in meeting records" as a source class; credit Maryland Lottery and Gaming (Seth Elkin, 2026-09-22).
 - **Virginia (VA) — APPLIED 2026-09-23:** Add the Virginia Partnership for Gaming & Health treatment/recovery dashboard (https://vpgh.vcu.edu/) as a treatment series; credit VPGH/VCU (Carolyn Hawley, 2026-09-22). Dashboard is a live Tableau view; recorded as a source, no static value.
 
+## [2026.10.0] — 2026-10-04
+
+Every U.S. state and DC is now classified in both the Harm Index and the self-exclusion directory. The dated notes below this section are the detail; this is what ships.
+
+### Changed
+- **`data/self-exclusion-programs.csv`: 12 → 38 rows.** 37 statewide programs (36 states + DC) plus the multi-state NVSEP row, each from an official regulator or lottery page. The 14 states with no statewide program are listed in `data/schema/self-exclusion-programs.md` (Known gaps §1), so all 51 jurisdictions are classified. Durations and removal rules are in `notes`; anything not confirmed on an official page is marked UNVERIFIED.
+- **Colorado (CO): tier U → A.** The Colorado Division of Gaming publishes cumulative self-exclusion enrollment in its news releases about twice a year (more than 1,300 as of August 2026). No tier U rows remain.
+- **Every correction since 2026.9.0 is in this archive:** OH, MD, VA (2026-09-23), OK, AZ, CA (2026-09-24/25) corrected; IA and NV verified (no change); PA and VA sources added; NCPG attribution note on 1-800-GAMBLER reporting added to the README and Harm Index schema.
+- `datapackage.json`: version 2026.10.0; `bytes` and `sha256` recomputed for `gambling-harm-index.csv` and `self-exclusion-programs.csv`.
+- `.zenodo.json`: resource type set to Dataset (2026.9.0 and 2026.9.1 were recorded as Software by the GitHub integration default).
+
+### Headline numbers
+- Publication tiers: **A 23 / B 11 / C 17 / U 0.**
+- **17 of 51 jurisdictions publish no recurring gambling-harm count; 10 of those 17 fund problem-gambling services.**
+
 ## Pending for 2026.10.0 (noted 2026-09-24)
 - Ohio: publisher rename — Ohio Department of Mental Health and Addiction Services (OhioMHAS) → **Ohio Department of Behavioral Health (DBH)**, dbh.ohio.gov. Verify the SFY2025 annual report URL still resolves after the domain move.
 - Iowa: IDPH merged into Iowa HHS; SFY2023 is confirmed the newest published problem-gambling report (hhs.iowa.gov, checked 9/24).
