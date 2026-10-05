@@ -7,7 +7,7 @@
 Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together, corrected and updated as sources change, free, with no registration and no rate limit.
 
 **Landing page:** https://betttr.net/data/
-**Current release:** `2026.10.1` — 4 October 2026 (Vermont correction: tier C → A; headline now 16 of 51 / 9 fund; see CHANGELOG)
+**Current release:** `2026.10.2` — 5 October 2026 (re-audit: AR and FL now publish recurring counts, ND moves to tier B, AZ self-exclusion figures added; headline now 14 of 51 / 7 fund; see CHANGELOG)
 **Contact and corrections:** support@betttr.net
 
 Every source this project draws on is a PDF. If this were also a PDF it would have added nothing. The CSV is the point.
@@ -18,10 +18,10 @@ Every source this project draws on is a PDF. If this were also a PDF it would ha
 
 | File | Rows | What it is | Refresh |
 |---|---|---|---|
-| [`data/gambling-harm-index.csv`](data/gambling-harm-index.csv) | 51 | What every U.S. state and DC publishes about gambling harm, plus the one genuinely comparable 51-jurisdiction series that exists — NCPG helpline contacts and rate per 100k. | **Monthly**, the 15th, 9:00 a.m. ET |
+| [`data/gambling-harm-index.csv`](data/gambling-harm-index.csv) | 51 | What every U.S. state and DC publishes about gambling harm, plus the one genuinely comparable 51-jurisdiction series that exists — NCPG helpline contacts and rate per 100k. | **Continuous**, as sources change |
 | [`data/sportsbook-rg-tools.csv`](data/sportsbook-rg-tools.csv) | 14 | Which responsible-gambling tools each major U.S. sportsbook and DFS operator publishes — limits, cool-off, self-exclusion, closure path, and the navigation to reach them. Every claim carries the operator URL it came from. | **Quarterly** |
 | [`data/recovery-glossary.csv`](data/recovery-glossary.csv) | 125 | Gambling-recovery and gambling-industry terms with a plain definition, a stigma-preferred phrasing, and a source or an explicit unsourced marker. | **As needed**, reviewed quarterly |
-| [`data/quit-gambling-apps.csv`](data/quit-gambling-apps.csv) | 107 | A dated panel of quit-gambling apps on the U.S. iOS App Store — release and update dates, rating counts, classification. | **Monthly**, with the Index |
+| [`data/quit-gambling-apps.csv`](data/quit-gambling-apps.csv) | 107 | A dated panel of quit-gambling apps on the U.S. iOS App Store — release and update dates, rating counts, classification. | **Periodic**, each pull dated |
 | [`data/self-exclusion-programs.csv`](data/self-exclusion-programs.csv) | 38 | How to enroll in self-exclusion by jurisdiction, plus the multi-state NVSEP and the states it reaches. | **Quarterly** |
 
 Each file has a plain-language column dictionary in [`data/schema/`](data/schema/) documenting every column, its units, its missing-value markers, and its known gaps. Machine-readable field schemas for all five are in [`datapackage.json`](datapackage.json) ([Frictionless Data Package v2](https://datapackage.org/)).

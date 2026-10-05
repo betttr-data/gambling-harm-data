@@ -44,6 +44,10 @@ First public release.
 - **Maryland (MD) — APPLIED 2026-09-23:** Monthly VEP enrollment is published inside Commission meeting records (https://www.mdgaming.com/commission/meeting-minutes-documents/, Managing Director of Gaming section) → add; decide/describe "published in meeting records" as a source class; credit Maryland Lottery and Gaming (Seth Elkin, 2026-09-22).
 - **Virginia (VA) — APPLIED 2026-09-23:** Add the Virginia Partnership for Gaming & Health treatment/recovery dashboard (https://vpgh.vcu.edu/) as a treatment series; credit VPGH/VCU (Carolyn Hawley, 2026-09-22). Dashboard is a live Tableau view; recorded as a source, no static value.
 
+## [2026.10.2] — 2026-10-05
+
+Re-audit of every tier B and C row after the Arizona Department of Gaming flagged that its annual report carries self-exclusion counts. Arizona: FY2026 Department Annual Report figures added (2,609 active self-exclusions; 12,141 since inception; credit Arizona Department of Gaming). Arkansas C → A (Arkansas Scholarship Lottery monthly helpline reports). Florida B → A (FCCG annual HelpLine reports through FY2023-24 and a CY2017–2025 help-contact series; lead credit Dan McCarthy, University of Maryland). North Dakota C → B (HHS legislative testimony: 570 treated since FY2022, one-off). Ohio: publisher renamed to Ohio Department of Behavioral Health. Massachusetts: DPH FY24 helpline report added as a source. Funding column now cross-checked against NAADGS 2025 Budget Update (exact match on the eight unfunded jurisdictions; credit Keith Whyte). Cadence: the Harm Index is now updated continuously as sources change; the monthly 15th-of-the-month edition schedule is retired. Tier counts A26 / B11 / C14. Headline: 14 of 51 publish no recurring count; 7 of those fund problem-gambling services.
+
 ## [2026.10.1] — 2026-10-04
 
 Vermont tier C → A (annual Act 63 report to the legislature carries helpline engagements and self-exclusion sign-ups; credit Vermont Department of Mental Health). Tier counts A24 / B11 / C16. Headline: 16 of 51 publish no recurring count; 9 of those fund problem-gambling services.
