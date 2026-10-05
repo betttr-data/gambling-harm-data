@@ -3,7 +3,7 @@
 **Resource name:** `gambling-harm-index`
 **Rows:** 51 (50 states + the District of Columbia), one per jurisdiction
 **Primary key:** `state`
-**Refresh cadence:** monthly, on the 15th at 9:00 a.m. Eastern
+**Refresh cadence:** continuous — updated as soon as a state's data changes or a correction arrives; every change is dated in CHANGELOG.md
 **Edition covered here:** 2026-10
 **Encoding:** UTF-8, comma-delimited, header row, quoted where needed
 
@@ -35,7 +35,7 @@ There is no composite score. There is no "harm index number" per state, and ther
 | 5 | `helpline_rate_per_100k_2025` | number | contacts per 100,000 residents | Taken **verbatim** from NCPG's published rate, not recomputed, so this file and NCPG always agree. |
 | 6 | `helpline_rate_per_100k_2024` | number | contacts per 100,000 residents | Same, CY2024. |
 | 7 | `helpline_yoy_change` | string | `increase, p<.001` · `decrease, p<.001` · `no significant change` · other NCPG wording | NCPG's own Poisson significance test, reproduced verbatim. Not recomputed by Betttr. |
-| 8 | `state_funds_pg_services_fy2025` | string | `Yes` · `No` | Dedicated public funding for problem-gambling services, FY2025. |
+| 8 | `state_funds_pg_services_fy2025` | string | `Yes` · `No` | Dedicated public funding for problem-gambling services, FY2025. Cross-checked against NAADGS's *2025 Budget Update of Publicly Funded Problem Gambling Services in the United States* (Marotta, Vazquez & Yamagata, 2026; naadgs.org/wp-content/uploads/2026/07/NAADGS-Report-2025-budget-Update.pdf), which lists Alabama, Alaska, Hawaii, Idaho, Montana, Texas, Utah and the District of Columbia as reporting no dedicated funding — the same eight `No` rows as this file. |
 | 9 | `publication_tier` | string | `A` · `B` · `C` · `U` | See tiers below. |
 | 10 | `state_published_indicator` | string | free text | What the state publishes, in its own words, or `None published`. |
 | 11 | `state_published_latest_value` | **string** | number-as-text **or** a marker | Deliberately a string: four non-numeric markers live in this column. **Not comparable across states.** |
@@ -81,9 +81,9 @@ Not done:
 
 ## Known gaps
 
-1. **16 of 51 jurisdictions publish no recurring gambling-harm count at all** (tier C), and 9 of those 16 fund problem-gambling services. (Was 17 / 10 until 2026-10-04, when Vermont's annual Act 63 report to the legislature was found to carry helpline and self-exclusion counts.) That is the single largest finding in the file and it is a finding, not a defect. (The pre-release draft of this note said 32; the verified baseline was 18 on 2026-09-21 and became 17 with the Oklahoma correction on 2026-09-24.)
+1. **14 of 51 jurisdictions publish no recurring gambling-harm count at all** (tier C), and 7 of those 14 fund problem-gambling services. (Was 17 / 10 until 2026-10-04, when Vermont's annual Act 63 report to the legislature was found to carry helpline and self-exclusion counts; 16 / 9 until 2026-10-05, when a re-audit found Arkansas's monthly lottery helpline reports (C → A) and North Dakota's treatment count in legislative testimony (C → B).) That is the single largest finding in the file and it is a finding, not a defect. (The pre-release draft of this note said 32; the verified baseline was 18 on 2026-09-21 and became 17 with the Oklahoma correction on 2026-09-24.)
 2. **No tier U rows remain (2026-10-04).** Colorado, the last one, was resolved to tier A: the Division of Gaming publishes cumulative self-exclusion enrollment as rounded counts in its own news releases about twice a year (latest: more than 1,300 as of August 2026). Arizona was tier U at baseline and was resolved to tier A on 2026-09-24 from a US browser. The tier stays defined for future rows that cannot be retrieved. Tier U rows are the first target of each monthly refresh.
-3. **A monthly clock does not mean monthly data.** Most underlying sources are annual. Each monthly edition records what was *newly published* in the preceding month, restates the standing figures, and notes what changed. In a month where nothing new is published, the edition says so.
+3. **Updates follow the sources, not a calendar.** Most underlying sources are annual. A row changes when its source publishes something new, an agency corrects it, or a re-audit finds a series we missed; the change is dated in CHANGELOG.md with its source and credit.
 4. **Helpline volume is a help-seeking proxy, not a harm measure.** It moves with awareness campaigns, ad mandates, state funding and helpline marketing, not only with harm. NCPG's own year-over-year test is reproduced so readers can see which changes are statistically distinguishable from noise.
 5. **The 1-800-GAMBLER / 1-800-MY-RESET transition affects interpretation.** The National Problem Gambling Helpline™ number is now **1-800-MY-RESET (1-800-697-3738)**; 1-800-GAMBLER is operated independently of NCPG following a 2025 New Jersey ruling, and 1-800-522-4700 remains an active NCPG access point. Contact volumes spanning the transition may reflect routing changes as well as demand changes. Treat 2025-to-2026 comparisons with that in mind.
 

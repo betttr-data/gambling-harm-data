@@ -4,7 +4,7 @@
 **Rows:** 107 unique apps (63 classified gambling-specific)
 **Primary key:** `track_id`
 **Pull date:** 2026-09-20
-**Refresh cadence:** monthly, with the Gambling Harm Index
+**Refresh cadence:** periodic; each App Store pull is dated
 **Encoding:** UTF-8, comma-delimited, header row
 
 ---
@@ -94,7 +94,7 @@ The headline that follows from those figures is churn, not choice: this is a cat
 2. **Three seed terms only.** Apps that describe themselves in other language (*sports betting addiction*, *stop betting*, *bet blocker* as one word) may be missed. The seed list is fixed across editions so the series stays comparable; adding a term would be a versioned method change, dated and noted.
 3. **iOS only, U.S. store only.** No Android, no other storefronts.
 4. **`average_user_rating` is unusable at these counts.** The median app has 3 ratings. Do not rank on it, do not average it across the panel, and do not compare a 5.0 from 2 ratings with a 4.4 from 4,000.
-5. **One-day snapshot.** App Store metadata changes continuously; every value is as of 2026-09-20. Each monthly edition is kept at its own URL so the series can be differenced.
+5. **One-day snapshot.** App Store metadata changes continuously; every value is as of 2026-09-20. Each dated pull is kept in its tagged release so the series can be differenced.
 6. **No pricing or monetization columns.** Price and formatted-price fields exist in the upstream API response and are deliberately excluded from this published file. Business-model comparisons cannot be made from it.
 7. **`seller_name` is not a company registry.** It is the App Store seller string, which is sometimes an individual, sometimes a trading name, and is not deduplicated across apps by the same developer.
 8. **No download or revenue estimates.** Apple publishes none, and this file does not model any.
@@ -106,4 +106,4 @@ Apple iTunes Search API, U.S. iOS App Store, pulled 2026-09-20. The raw API resp
 
 ## Corrections
 
-**support@betttr.net.** Developers who believe their app is misclassified should say so; we correct on their word plus the listing, and the correction is dated in the next monthly edition.
+**support@betttr.net.** Developers who believe their app is misclassified should say so; we correct on their word plus the listing, and the correction is dated in the next release.

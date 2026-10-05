@@ -4,7 +4,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
 [![Data Package](https://img.shields.io/badge/Frictionless-datapackage.json-green)](datapackage.json)
 
-Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together, refreshed on a stated clock, free, with no registration and no rate limit.
+Five machine-readable datasets on gambling harm and gambling recovery in the United States, published together, corrected and updated as sources change, free, with no registration and no rate limit.
 
 **Landing page:** https://betttr.net/data/
 **Current release:** `2026.10.1` — 4 October 2026 (Vermont correction: tier C → A; headline now 16 of 51 / 9 fund; see CHANGELOG)
@@ -141,13 +141,13 @@ A method change is dated, listed, and **never applied retroactively to a publish
 
 | Dataset | Cadence | When |
 |---|---|---|
-| Gambling Harm Index | Monthly | The 15th, 9:00 a.m. ET |
-| Quit-Gambling Apps | Monthly | With the Index |
-| Sportsbook RG Tools | Quarterly | First Index of the quarter |
-| Self-Exclusion Programs | Quarterly | First Index of the quarter |
+| Gambling Harm Index | Continuous | As soon as a state's data changes or a correction arrives |
+| Quit-Gambling Apps | Periodic | Each App Store pull is dated |
+| Sportsbook RG Tools | Quarterly | Reviewed each quarter |
+| Self-Exclusion Programs | Quarterly | Reviewed each quarter |
 | Recovery Glossary | As needed | Reviewed quarterly |
 
-A monthly clock does not mean monthly data. Most underlying sources are annual. Each monthly release records what was newly published in the preceding month, restates the standing figures, and notes what changed. **In a month where nothing new is published anywhere, the release says that** — and that is a real finding about the state of the field.
+Updates follow the sources, not a calendar. A row changes when its source publishes something new, an agency corrects it, or a re-audit finds a series we missed — and the release ships that day. Most underlying sources are annual, so most rows change rarely. Every change is dated in the CHANGELOG with its source and credit.
 
 Every release is tagged (`v2026.9.0`), archived on Zenodo, and gets its own version DOI. Nothing is overwritten.
 
@@ -156,7 +156,7 @@ Every release is tagged (`v2026.9.0`), archived on Zenodo, and gets its own vers
 ## Contributing
 
 - **Corrections and source tips:** email **support@betttr.net**, or open an issue. A source URL makes it fast.
-- **A state we've missed:** the biggest open gap is `self-exclusion-programs.csv`, which covers 11 jurisdictions and should cover all of them. Issues with a regulator URL are very welcome.
+- **A state we've missed:** `self-exclusion-programs.csv` now classifies all 51 jurisdictions; any field marked UNVERIFIED in `notes` is a gap, and an issue with a regulator URL closes it fast.
 - **Pull requests to `data/*.csv` are not merged.** The files are generated from a sourcing process, not edited by hand; a PR would be overwritten at the next release. Send the correction instead and it will land in the next tagged version with your credit in the changelog if you want it.
 
 ---
