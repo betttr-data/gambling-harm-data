@@ -38,6 +38,13 @@ https://raw.githubusercontent.com/betttr-data/gambling-harm-data/main/data/self-
 
 `main` always points at the newest release. For a frozen copy, use a tag: replace `main` with `v2026.10.0`, or cite the version DOI.
 
+### Mirrors
+
+The same files, synced at each release. GitHub and the Zenodo DOI stay the source of record.
+
+- Kaggle: https://www.kaggle.com/datasets/calebsilverman/gambling-harm-open-data-us
+- Hugging Face: https://huggingface.co/datasets/betttr/gambling-harm-open-data
+
 ---
 
 ## How to cite
